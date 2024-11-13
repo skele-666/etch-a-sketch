@@ -28,7 +28,9 @@ Default is 16.`);
     if (gridSize > 100) gridSize = prompt(`Enter grid size: (e.g. 24, 30).
 Max size is 100.
 Default is 16.`);
-    if (gridSize == null || gridSize == '') gridSize = 16;
+    if (gridSize == null || gridSize == 0) gridSize = prompt(`Enter grid size: (e.g. 24, 30).
+Max size is 100.
+Default is 16.`);;
     fillGrid();
 });
 
