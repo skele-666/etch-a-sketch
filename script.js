@@ -1,9 +1,4 @@
 const container = document.getElementById('container');
-container.style.display = 'flex';
-container.style.flexWrap = 'wrap';
-container.style.width = '400px';
-container.style.height = '400px';
-
 const sizeBtn = document.getElementById('size');
 const resetBtn = document.getElementById('reset');
 
@@ -38,20 +33,11 @@ resetBtn.addEventListener('click', () => {
 });
 
 let isMouseDown = false;
-
 document.addEventListener('mousedown', () => isMouseDown = true);
 document.addEventListener('mouseup', () => isMouseDown = false);
 
 container.addEventListener('mouseover', (e) => {
     if (isMouseDown && e.target !== container) {
-        e.target.style["background-color"] = "#fb6f92";
-        e.target.style.border = '0.5px solid #fb6f92';
-        e.target.style.padding = '1px';
-    }
-});
-
-container.addEventListener('click', (e) => {
-    if (e.target !== container) {
         e.target.style["background-color"] = "#fb6f92";
         e.target.style.border = '0.5px solid #fb6f92';
         e.target.style.padding = '1px';
